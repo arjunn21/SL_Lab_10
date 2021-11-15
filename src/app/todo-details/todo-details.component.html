@@ -1,0 +1,13 @@
+<h3 *ngIf="this.todoService.taskList.length >= 1" style = "margin: 10px;">Todo (Table Format)</h3>
+<div class="center">
+    <table border="1px" *ngIf="this.todoService.taskList.length >= 1">
+        <tr>
+            <td><b>S.No</b></td>
+            <td><b>Task</b></td>
+        </tr>
+        <tr *ngFor="let item of this.todoService.taskList">
+            <td>{{item.id}}</td>
+            <td>{{item.detail}}</td>
+        </tr>
+    </table>
+</div>

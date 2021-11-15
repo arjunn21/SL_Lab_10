@@ -1,0 +1,14 @@
+<div class="width" style = "margin: 0 auto">
+  <mat-selection-list #tasks>
+    <mat-list-option *ngFor = "let task of this.todoService.taskList">
+      {{task.detail}}
+    </mat-list-option>
+  </mat-selection-list>
+</div>
+<div class="center">
+    <mat-form-field id="input" class="hidden width">
+        <mat-label>Add Task</mat-label>
+        <input matInput placeholder="Task" name="input" #input>
+    </mat-form-field>
+    <button class="hidden" id="button" mat-raised-button (click)="submit(input.value)">Submit</button>
+</div>
